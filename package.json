@@ -1,21 +1,19 @@
 {
-  "name": "instagram",
+  "name": "trip-social",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Aditya",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "method-override": "^3.0.0",
     "uuid": "^9.0.1"
-  },
-  "engines": {
-    "node": "20.x"
   }
 }
