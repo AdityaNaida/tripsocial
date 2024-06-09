@@ -11,7 +11,27 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
 let posts = [
-  // your initial posts
+  {
+    id: uuidv4(),
+    username: "Aditya",
+    caption:
+      "Feeling energized, inspired, and maybe a little bit in love with those giant slices of pizza. ",
+    img: "https://images.pexels.com/photos/472037/pexels-photo-472037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    id: uuidv4(),
+    username: "Mahi",
+    caption:
+      "Where history whispers on the wind.   Exploring ancient castles, strolling through charming gardens. ",
+    img: "https://images.pexels.com/photos/2682676/pexels-photo-2682676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    id: uuidv4(),
+    username: "Karan",
+    caption:
+      "Soaked up the sunshine, swam in crystal-clear coves, and sailed under the Sydney Harbour Bridge.",
+    img: "https://images.pexels.com/photos/1680247/pexels-photo-1680247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
 ];
 
 app.get("/posts", (req, res) => {
