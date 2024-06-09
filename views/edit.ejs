@@ -1,0 +1,26 @@
+<%- include("header.ejs") %>
+<main>
+    <form method="post" class="create_form" action="/posts/<%=post.id%>?_method=PATCH"   >
+        <h2>Edit Post</h2>
+        <div class="input_holder">
+          <label for="editcaption">Caption</label>
+         
+          <textarea name="caption" id="editcaption" placeholder="Edit Caption"   rows="3"><%=  post.caption %></textarea>
+        </div>
+        <div class="input_holder">
+          <label for="editimage_address">Image Address</label>
+          <textarea
+            name="img"
+            id="editimage_address"
+            placeholder="Enter URL"
+            rows="5"
+          ><%=  post.img %></textarea>
+        </div>
+    
+        <button>Save</button>
+      </form>
+</main>
+
+    
+</body>
+</html>

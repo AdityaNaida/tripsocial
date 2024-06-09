@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trip Social | All posts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="header">
+        <h1><span>Trip</span> Social</h1>
+        <a href="http://localhost:8080/posts/create" class="create_btn"
+          >Create Post</a
+        >
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <% for(post of posts){ %>
+        <div class="post">
+          <div>
+            <div class="post_heading">
+              <img
+                src="/icons/user.webp"
+                alt="user icon"
+                height="30"
+                width="30"
+                decoding="async"
+                loading="lazy"
+              />
+              <p class="username"><%= post.username %></p>
+            </div>
+            <p class="caption"><%= post.caption %></p>
+          </div>
+          <div class="pagination-holder">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="controllers">
+            <a href="http://localhost:8080/posts/<%=post.id%>"
+              ><img
+                src="/icons/eye-icon.svg"
+                alt="eye icon"
+                height="25"
+                width="25"
+                decoding="async"
+                loading="lazy"
+              />
+              View</a
+            >
+            <a href="http://localhost:8080/posts/<%=post.id%>/edit"
+              ><img
+                src="/icons/edit-icon.svg"
+                alt="eye icon"
+                height="25"
+                width="25"
+                decoding="async"
+                loading="lazy"
+              />
+              Edit</a
+            >
+            <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+            <button class="delete-btn">
+              <img
+                src="/icons/delete-icon.svg"
+                alt="eye icon"
+                height="25"
+                width="25"
+                decoding="async"
+                loading="lazy"
+              />
+              Delete
+            </button>
+          </form>
+          </div>
+          <div class="img_holder">
+            <img
+              src="<%= post.img%>"
+              alt="post image"
+              height="100"
+              width="100"
+              decoding="async"
+              loading="eager"
+            />
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </main>
+
+    <script defer src="/app.js"></script>
+  </body>
+</html>

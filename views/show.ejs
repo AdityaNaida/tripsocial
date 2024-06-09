@@ -1,0 +1,21 @@
+<%- include("header.ejs") %>
+<main>
+    <div class="view_post">
+
+        <p class="author">Post Id: <span><%= post.id %></span></p>
+        <p class="author">Author: <span><%= post.username %></span></p>
+        <p class="author">Caption: <span><%= post.caption %></span></p>
+        <div class="img_holder">
+            <img
+              src="<%= post.img%>"
+              alt="post image"
+              height="100"
+              width="100"
+              decoding="async"
+              loading="eager"
+            />
+          </div>
+    </div>
+</main>
+</body>
+</html>
